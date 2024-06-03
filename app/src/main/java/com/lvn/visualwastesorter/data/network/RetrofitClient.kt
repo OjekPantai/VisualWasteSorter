@@ -1,5 +1,6 @@
-package com.lvn.visualwastesorter.data
+package com.lvn.visualwastesorter.data.network
 
+import com.lvn.visualwastesorter.data.api.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

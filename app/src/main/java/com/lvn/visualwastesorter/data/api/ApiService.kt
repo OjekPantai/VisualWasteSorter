@@ -1,6 +1,6 @@
-package com.lvn.visualwastesorter.data
+package com.lvn.visualwastesorter.data.api
 
-import com.lvn.visualwastesorter.ui.post.PostResponse
+import com.lvn.visualwastesorter.data.model.PostResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

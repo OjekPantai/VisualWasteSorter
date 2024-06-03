@@ -7,10 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.lvn.visualwastesorter.data.RetrofitClient
+import com.lvn.visualwastesorter.data.network.RetrofitClient
 import com.lvn.visualwastesorter.databinding.FragmentHomeBinding
-import com.lvn.visualwastesorter.ui.post.PostAdapter
-import com.lvn.visualwastesorter.ui.post.PostResponse
+import com.lvn.visualwastesorter.data.model.PostResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

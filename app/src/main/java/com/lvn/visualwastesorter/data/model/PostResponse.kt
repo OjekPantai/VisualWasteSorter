@@ -1,4 +1,4 @@
-package com.lvn.visualwastesorter.ui.post
+package com.lvn.visualwastesorter.data.model
 
 import com.google.gson.annotations.SerializedName
 
