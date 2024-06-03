@@ -18,25 +18,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupBottomNavigation()
+        setDefaultFragment()
+    }
+
+    private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.menu_home -> {
-                    replaceFragment(HomeFragment())
-                    return@setOnItemSelectedListener  true
-                }
-                R.id.menu_scan -> {
-                    replaceFragment(ScanFragment())
-                    return@setOnItemSelectedListener  true
-                }
-                R.id.menu_history -> {
-                    replaceFragment(HistoryFragment())
-                    return@setOnItemSelectedListener  true
-                }
-                else -> false
+                R.id.menu_home -> replaceFragment(HomeFragment())
+                R.id.menu_scan -> replaceFragment(ScanFragment())
+                R.id.menu_history -> replaceFragment(HistoryFragment())
             }
+            true
         }
+    }
 
-        // Set default fragment
+    private fun setDefaultFragment() {
         binding.bottomNavigation.selectedItemId = R.id.menu_home
     }
 
