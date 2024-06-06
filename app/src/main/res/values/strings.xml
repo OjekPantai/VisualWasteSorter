@@ -2,4 +2,13 @@
     <string name="app_name">VisualWasteSorter</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="history">History</string>
+    <string name="scan">Scan</string>
+    <string name="type_of_waste">Type of Waste</string>
+    <string name="home">Home</string>
+    <string name="waste_title">Cardboard</string>
+    <string name="waste_desc">Karton biasanya digunakan untuk kemasan produk, kotak pengiriman, dan berbagai aplikasi lainnya. Karton berlapis (seperti kotak susu atau jus) sering kali memiliki lapisan plastik atau aluminium Penanggulangan: Karton harus dilipat dan diratakan sebelum didaur ulang. Pengelolaan: Karton yang bersih dan kering dapat didaur ulang. Karton yang terkontaminasi oleh makanan atau cairan harus dibuang sebagai sampah biasa atau dikomposkan jika memungkinkan.</string>
+    <string name="product_image_description">waste_image</string>
+    <string name="back_button_description">float_back</string>
+    <string name="detail">detail</string>
 </resources>

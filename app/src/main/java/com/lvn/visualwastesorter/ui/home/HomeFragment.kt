@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,7 @@ class HomeFragment : Fragment() {
     private val list = ArrayList<PostResponse>()
     private lateinit var rvHome: RecyclerView
     private lateinit var adapter: PostAdapter
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +35,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         rvHome = binding.rvHome
+        progressBar = binding.progressBar
 
         rvHome.apply {
             setHasFixedSize(true)
@@ -46,11 +49,15 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadPosts() {
+        progressBar.visibility = View.VISIBLE
+
         RetrofitClient.instance.getPosts().enqueue(object : Callback<ArrayList<PostResponse>> {
             override fun onResponse(
                 call: Call<ArrayList<PostResponse>>,
                 response: Response<ArrayList<PostResponse>>
             ) {
+                progressBar.visibility = View.GONE
+
                 response.body()?.let { newPosts ->
                     val previousSize = list.size
                     list.addAll(newPosts)
@@ -59,6 +66,7 @@ class HomeFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<ArrayList<PostResponse>>, t: Throwable) {
+                progressBar.visibility = View.GONE
             }
         })
     }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.lvn.visualwastesorter.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.lvn.visualwastesorter.ui.detail.DetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_detail">
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.lvn.visualwastesorter.ui.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history">
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.lvn.visualwastesorter.ui.scan.ScanFragment"
+        android:label="@string/scan"
+        tools:layout="@layout/fragment_scan">
+    </fragment>
+
+</navigation>

@@ -2,13 +2,13 @@
     <item
         android:id="@+id/menu_home"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
+        android:title="@string/home" />
     <item
         android:id="@+id/menu_scan"
         android:icon="@drawable/ic_scan"
-        android:title="Scan" />
+        android:title="@string/scan" />
     <item
         android:id="@+id/menu_history"
         android:icon="@drawable/ic_history"
-        android:title="History" />
+        android:title="@string/history" />
 </menu>

@@ -19,13 +19,11 @@ class PostAdapter(private val list: ArrayList<PostResponse>) :
                 tvDescription.text = postResponse.text
             }
         }
-
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         holder.bind(list[position])
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_waste, parent, false)
         return PostViewHolder(view)

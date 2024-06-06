@@ -11,13 +11,15 @@
         android:id="@+id/titleScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Input Image"
+        android:fontFamily="poppins"
+        android:text="@string/scan"
+        android:textSize="24sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@+id/iv_scan_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
+        app:layout_constraintVertical_bias="0.072" />
 
     <ImageView
         android:id="@+id/iv_scan_placeholder"
@@ -32,11 +34,12 @@
 
     <Button
         android:id="@+id/button_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_below="@id/iv_scan_placeholder"
         android:layout_toStartOf="@id/iv_scan_placeholder"
         android:text="Camera"
+        android:background="@drawable/btncustom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +48,13 @@
 
     <Button
         android:id="@+id/button_gallery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_below="@id/iv_scan_placeholder"
         android:layout_toEndOf="@id/iv_scan_placeholder"
+        android:layout_marginTop="16dp"
         android:text="Gallery"
+        android:background="@drawable/btncustom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
